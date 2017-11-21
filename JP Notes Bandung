@@ -1,0 +1,221 @@
+JP Notes Bandung
+
+Day 1
+===============================================================================
+
+Java SE --> 'desktop solutions'
+Java EE --> enterprise application
+					|--> 'distributed'
+Java ME --> limited device
+
+Quiz -- 70 (no limit)
+Mid,Final -- 60 (3x)
+
+Java App 			Native App
+--------			----------
+  JVM					OS
+--------
+  O S
+
+  				JVM
+  			   /
+  			JRE
+  		   /   \
+  		  /	    Standard Library
+  	   JDK
+  	   	  \
+  	   	   \
+  	   	    Tools: compiler,jar tools,javadoc generator...
+
+Data type:
+- primitive
+	- integral: byte,short,int,long
+	- floating: float,double
+	- logical: boolean
+	- textual: char
+- reference/class/object
+    String,Math,System,StringBuffer,Account,Customer, ...
+
+int ccNumber = 2222_3333_4444_5555;
+int abc = 0x123ABCD;
+int def = 0b1001_0101_1000_0010;
+
+					Mutable			Thred-Safe
+String 				   X				X
+StringBuilder		   V			    X
+StringBuffer 		   V			    V
+
+Membandingkan dua String:
+- equals / equalsIgnoreCase : boolean  -- true
+- compareTo / compareToIgnoreCase : int  -- 0
+- == (not recomended) : membandingkan lokasi di heap area
+						akan bernilai true jika dan hanya jika dua string berada di lokasi yang sama
+
+operand1 & operand2
+
+operand1 && operand2
+
+Looping:
+- while --> 0 - ~
+- do..while --> 1 - ~
+- for --> Nx
+
+1
+2
+3 foo
+4
+5 bar
+6 foo
+7 baz
+8
+9 foo
+...
+15 foo bar
+...
+21 foo baz
+...
+100
+
+java class:
+- driver
+	di dalam class terdapat method main:
+	public static void main(String [] xxx) { ... }
+- object/library
+	tidak terdapat method main
+
+Constructor
+-----------------
+digunakan untuk membuat object dari class
+bisa juga digunakan untuk menginisialisasi attribute dari object yang akan dibuat
+setiap class PASTI memiliki constructor
+jika tidak dituliskan akan dibuatkan DEFAULT CONSTRUCTOR
+DEFAULT CONSTRUCTOR akan hilang jika kita menuliskan constructor secara explicit, supaya tetap bisa digunakan, dilakukan OVERLOADING CONSTRUCTOR
+Yang membedakan constructor dengan method:
+- constructor nama nya sama dengan nama class
+- constructor tidak memiliki return type
+
+syarat Overloading:
+nama : SAMA
+parameter : HARUS BEDA (beda type,beda urutan,beda jumlah)
+return type : BOLEH BEDA
+access modifier : BOLEH BEDA
+
+syarat Overriding
+kapan Overriding dilakukan? 
+Jika subclass hendak memodifikasi behavior/method yang ada di super class
+Syaratnya:
+- nama method: HARUS SAMA
+- parameter: HARUS SAMA
+- return type: SAMA atau Sub-Class nya
+- access modifier: SAMA atau lebih luas (more accessible)
+
+			same	  same		   inheri-		univer-
+			class     package	   tance		sal
+----------------------------------------------------------
+public		  V 		 V 		     V 			   V
+protected  	  V 		 V 			 V 			   X
+[default] 	  V 	     V 		     X 			   X
+private  	  V 		 X 			 X 			   X
+
+SDLC
+1. analysis -- "WHAT" -- use case diagram
+2. design -- "HOW"
+3. develop
+4. testing
+5. deploy
+
+object 				class
+-------------		-------------
+- attribute			- variable 
+- behavior 			- method
+
+object-oriented concept:
+- encapsulation
+	membungkus: deklarasi variable & method harus di dalam class
+	feature lain: information hiding (penyembunyian data/attribute/variable) --> supaya data digunakan dengan 'rule' yang sudah ditentukan
+	dilakukan dengan menggunakan access modifier 'private' pada variable, menyediakan method:
+	- mengambil nilai/getter/accessor
+	- mengubah nilai/setter/mutator
+- inheritance
+	single inheritance
+- polymorphism
+
+method:
+[access_modifier] return_type nama_method([parameters]) {
+	
+}
+
+return_type:
+	- primitive
+	- reference
+	- void
+
+Exception:
+	- checked
+		semua subclass dari Exception, kecuali RuntimeException
+	- unchecked
+		RuntimeException beserta sub-class nya
+
+comments:
+- single line  	//
+- multiple line		/*
+
+					*/
+- documentation comments 	/**
+							*
+							*
+							*/
+
+
+By default, di interface:
+- semua method: public abstract
+- semua variable: public static final
+
+Member dari sebuah class dibedakan menjadi:
+- class member --> static
+	dipanggil cukup menggunakan nama class-nya
+	variable --> nilai nya akan di share antara instance yang satu dengan yang lain
+- instance member --> non-static
+	dipanggil menggunakan instance/object dari class tersebut
+	variable --> nilai nya unik antara instance yang satu dengan yang lain
+
+boolean
+
+byte -- short -- int -- long -- float -- double
+		       /
+	      char
+
+int a = 10;
+double b = a; -- PROMOTION --> double b = (double)a;
+					|--> implicit
+
+double c = 8.9;
+int d = c; XX -- CASTING --> int d = (int)c;
+			       |--> explicit
+
+byte e = 10;
+byte f = 20;
+byte g = e + f; XX ---> byte g = (byte)(e + f);
+
+float h = 100.7; XX --> float h = 100.7F;
+						float h = 100.7f;
+
+Day 2
+===============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

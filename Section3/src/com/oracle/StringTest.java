@@ -1,6 +1,6 @@
 package com.oracle;
    
-public class StringTest {
+public class StringTest{
 	public static void main(String[] args) {
 		String a = "Hello World Satu Dua Tiga";
 		for(int i = 0 ; i < a.length() ; i++) {

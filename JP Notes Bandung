@@ -201,7 +201,71 @@ float h = 100.7; XX --> float h = 100.7F;
 						float h = 100.7f;
 
 Day 2
-===============================================================================
+==========================================================
+
+				Array		ArrayList
+--------------------------------------
+size			fixed		dynamic
+element type 	primitive	reference
+				reference
+
+primitive		Wrapper Class
+----------------------------------
+boolean			Boolean
+byte			Byte
+short			Short
+int 			Integer
+long 			Long
+float 			Float
+double 			Double
+char 			Character
+
+unboxing: reference --> primitve
+
+String x = "1000";
+Integer wx = new Integer(x);
+int px = wx.intValue();
+
+int px2 = Integer.parseInt(x);
+
+boxing: primitive --> reference
+
+int y = 100;
+Integer wy = new Integer(y);
+
+JDK1.5: auto-boxing & auto-unboxing
+
+Integer zz = 100;
+int xz = new Integer(1000);
+
+Collections
+- Set
+	* unordered
+	* tidak boleh ada duplikasi
+- List
+	* ordered
+	* boleh ada duplikasi
+- Queue
+	* antrian
+	* FIFO / LIFO
+- Map
+	* setiap element berisi sepasang key-value
+	* satu key hanya memiliki satu value
+	* key element yang satu dengan yang lain harus unique
+
+Dua object dikatakan duplicate JIKA:
+- bilangan hashcode nya sama
+- kalau dibandingkan dengan equals akan bernilai true
+
+Ordering:
+- natural --> Comparable
+- custom --> Comparator
+
+
+
+
+
+
 
 
 

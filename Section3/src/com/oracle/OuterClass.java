@@ -1,5 +1,5 @@
 package com.oracle;
-
+ 
 public class OuterClass {
 	int a = 10;
 	class Inner1 {

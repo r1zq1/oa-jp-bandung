@@ -13,7 +13,7 @@ public class TestDBConnection {
 		String password = "app";
 		String dburl = "jdbc:derby://localhost:1527/sample";
 		String query = "SELECT * FROM CUSTOMER";
-		// Register Driver
+	 	// Register Driver
 		try { 
 			Class.forName(driver);
 		} catch (ClassNotFoundException e) {

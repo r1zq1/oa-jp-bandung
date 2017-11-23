@@ -18,7 +18,7 @@ public class TestDBConnection {
 			Class.forName(driver);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		}
+		} 
 		try (
 			Connection conn = DriverManager.getConnection(dburl, username, password);
 			Statement st = conn.createStatement();

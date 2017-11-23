@@ -14,7 +14,7 @@ public class TestDBConnection {
 		String dburl = "jdbc:derby://localhost:1527/sample";
 		String query = "SELECT * FROM CUSTOMER";
 		// Register Driver
-		try {
+		try { 
 			Class.forName(driver);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
